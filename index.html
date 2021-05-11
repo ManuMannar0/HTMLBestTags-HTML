@@ -25,40 +25,59 @@
         <header>
 
           <nav>
+            <p>A elements in nav element, inside header</p>
             <p>
               <a href="#">Home</a> | <a href="#">About</a> |
               <a href="#">Contact</a>
             </p>
           </nav>
-  
-          <h1>Text in 'h1'</h1>
-          <h3>Text in 'h3'</h3>
-          <h4>Text in 'h4'</h4>
-          <h5>Text in 'h5'</h5>
-          <h6>Text in 'h6'</h6>
-          <p><i>Italic text.</i></p>
-          <p><q>Quoted text.</q></p>
-          <p>Superscript: E=mc<sup>2.</sup></p>
-          <p>Subscript: H<sub>2</sub>O.</p>
-          <p><address>Address text.</address></p>
-          <p><strong>Strong text!</strong></p>
-          <p><b>Testo bold.</b></p>
-
-
-          <section>
-            <p>A paragraph in section tag.</p>
-          </section>
         </header>
-  
-        <svg viewBox="0 0 200 200" width="400"  height="400">
-          <circle cx="100" cy="100" fill="yellow" r="78" stroke="black" stroke-width="3" />
-          <g>
-              <circle cx="65" cy="82" r="12" />
-              <circle cx="130" cy="82" r="12" />
-          </g>
-          <path d="M65 115 a1,0.8 0 0,0 65,0" fill="none" stroke="black" stroke-width="3" />
-        </svg>
-  
+
+        <hr>
+
+        <h1>Text in 'h1'</h1>
+        <h2>Text in 'h2'</h2>
+        <h3>Text in 'h3'</h3>
+        <h4>Text in 'h4'</h4>
+        <h5>Text in 'h5'</h5>
+        <h6>Text in 'h6'</h6>
+        <p><i>Italic text.</i></p>
+        <p><q>Quoted text.</q></p>
+        <p>Superscript: E=mc<sup>2.</sup></p>
+        <p>Subscript: H<sub>2</sub>O.</p>
+        <p><address>Address text.</address></p>
+        <p><strong>Strong text!</strong></p>
+        <p><b>Testo bold.</b></p>
+        <p><ins>Ins element</ins></p>
+        <p><u>Underlined elemet</u></p>
+        <p><mark>Mark element</mark></p>
+        <p><del>Del element</del></p>
+        <hr>
+
+        <section>
+          <p>Section element with paragraph.</p>
+        </section>
+
+        <hr>
+
+        <div>
+          <p>Div element with paragraph.</p>
+        </div>  
+
+        <hr>
+        
+        <article>
+          <p>Article element with paragraph.</p>
+        </article>
+        
+        <hr>
+
+        <aside>
+          <p>Aside element with paragraph.</p>
+        </aside>
+
+        <hr>
+
         <ol>
           <p>Order list</p>
           <li>Item 1</li>
@@ -66,80 +85,133 @@
           <li>Item 3</li>
         </ol>
 
-        <canvas id="myCanvas" width="300" height="200"></canvas>
+        <hr>
+
+        <ul>
+          <p>Unordered list</p>
+          <li>Li element</li>
+          <li>Li element</li>
+          <li>Li element</li>
+          
+        </ul>
+
+        <hr>
+
+        <p>Meter element: <meter value="0.8">80%</meter></p>
+
+        <hr>
+
+        <p>Task progress element <progress id="bar" value="0" max="100"><span>0</span>%</progress></p>
         <script type="text/javascript">
-          window.onload = function () {
-            var canvas = document.getElementById("myCanvas");
-            var context = canvas.getContext("2d");
-            context.moveTo(50, 150);
-            context.lineTo(250, 50);
-            context.stroke();
-          };
+          var i = 0;
+          var progressBar = document.getElementById("bar");
+          function countNumbers(){
+            if(i < 100){
+              i = i + 1;
+              progressBar.value = i;
+              // For browsers that don't support progress tag
+              progressBar.getElementsByTagName("span")[0].textContent = i;
+            }
+            // Wait for sometime before running this script again
+            setTimeout("countNumbers()", 500);
+          }
+          countNumbers();
         </script>
 
         <hr>
 
-        <p>Select section</p>
-        <select>
-          <optgroup label="Sports cars">
-              <option value="ferrari">Ferrari</option>
-              <option value="lamborghini">Lamborghini</option>
-          </optgroup>
-          <optgroup label="Luxury cars">
-              <option value="mercedes">Mercedes</option>
-              <option value="bentley">Bentley</option>
-          </optgroup>
-        </select>
-
-        <article>
-          <p>Article section</p>
-        </article>
-        
-        <hr>
-
-        <aside>
-          <p>Aside section</p>
-        </aside>
-
-        <hr>
-
-        <p>Meter tag: <meter value="0.8">80%</meter></p>
-
-        <hr>
-
         <p>
-          The sequence "1-2-3-4-5" was reversed as: <bdo dir="rtl">1-2-3-4-5</bdo>
+          Bdo element can reverse my name "Emanuele": <bdo dir="rtl">Emanuele</bdo>
         </p>
 
         <hr>
 
         <blockquote>
-          <p>This is an example of a long quotation.</p>
+          <p>Blockquote element (long quotation).</p>
         </blockquote>
         
         <hr>
 
+        <pre>
+          The pre
+              element preserves      spaces,
+                  line-breaks, tabs...
+        </pre>
 
+        <hr>
 
+        <form action="process-key.php" method="post" style="border: 3px solid">
+          <p><label>Input text element -><input type="text" name="username"><-</label></p>
+          <p><label>Keygen element -><keygen name="key"></label><-</p>
+          
+          <hr>
 
-
-
-
-
-
-
-        
-        <form action="action.php" method="post">
-          <p>
-            First name:<input type="text" name="firstname" />
-            <button type="submit" value="Submit">Submit</button>
-            <button type="reset" value="Reset">Reset</button>
+          <p>Text area element: 
+            <textarea cols="60" rows="5">write here...</textarea>
           </p>
+          
+          <hr>
+
+          <p>Fieldset 'Input radio'</p>
+          <fieldset>
+            <legend>Legend element</legend>
+            <p>Select radios:</p>
+            <input type="radio" name="RadioSet" value="one" id="male" />
+            <label for="male">Radio1</label>
+            <input type="radio" name="RadioSet" value="two" id="female" />
+            <label for="female">Radio2</label>
+          </fieldset>
+          
+          <hr>
+
+          <p>Fieldset 'Optgroup'</p>
+          <fieldset>
+            <legend>Legend element</legend>
+            <p>Select element</p>
+            <select>
+              <optgroup label="Optgroup1">
+                  <option value="one">Option1-1</option>
+                  <option value="two">Option1-2</option>
+              </optgroup>
+              <optgroup label="Optgroup2">
+                  <option value="one">Option2-1</option>
+                  <option value="two">Option2-2</option>
+              </optgroup>
+            </select>
+          </fieldset>
+          
+          <hr>
+
+          <p>Details element</p>
+          <details>
+            <summary>Summary element</summary>
+            <p>A paragraph element</p>
+          </details>
+
+          <hr>
+
+          <p>Datalist element</p>
+          <input type="text" list="option-list" />
+          <datalist id="option-list">
+            <option value="Option1"></option>
+            <option value="Option2"></option>
+            <option value="Option3"></option>
+          </datalist>
+
+          <hr>
+          
+          <input type="submit" value="Submit">
         </form>
-        
-        <table>
+
+        <hr>
+
+        <table style="border: 3px solid;">
+          <colgroup>
+            <col style="background-color: #adff2f" />
+            <col span="2" style="background-color: #f0e68c" />
+          </colgroup>
           <caption>
-            User Details
+            Table, colgroup, caption, thead, tbody, tfoot, tr and th elements
           </caption>
           <thead>
             <tr>
@@ -169,116 +241,69 @@
             <tr>
                 <td colspan="3">Copyright �  2015 Tutorial Republic</td>
             </tr>
-        </tfoot>
-          <table>
-            <colgroup>
-              <col style="background-color: #adff2f" />
-              <col span="2" style="background-color: #f0e68c" />
-            </colgroup>
-            <tr>
-              <th>No.</th>
-              <th>Name</th>
-              <th>Email</th>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>John Carter</td>
-              <td>johncarter@mail.com</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Peter Parker</td>
-              <td>peterparker@mail.com</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>John Rambo</td>
-              <td>johnrambo@mail.com</td>
-            </tr>
-          </table>
+          </tfoot>
         </table>
-        <p>Enter your favorite browser name:</p>
-        <input type="text" list="browsers" />
-        <datalist id="browsers">
-          <option value="Firefox"></option>
-          <option value="Chrome"></option>
-          <option value="Internet Explorer"></option>
-          <option value="Opera"></option>
-          <option value="Safari"></option>
-        </datalist>
-        <details>
-          <summary>What is HTML?</summary>
-          <p>
-            HTML is a markup language for describing the structure of web pages.
-          </p>
-        </details>
-        <dialog open>
+
+        <hr>
+
+        <p>Dialog element (display:relative)</p>
+        <dialog open style="position: relative;">
           <p>Are you sure you want to remove this item?</p>
           <button type="button">Yes</button>
           <button type="button">No</button>
         </dialog>
-        <embed src="blur.swf" width="400px" height="200px" />
-        <form action="http://www.example.com/" method="post">
-          <fieldset>
-            <legend>Gender</legend>
-            <input type="radio" name="gender" value="male" id="male" />
-            <label for="male">Male</label>
-            <input type="radio" name="gender" value="female" id="female" />
-            <label for="female">Female</label>
-          </fieldset>
-        </form>
+
+        <hr>
+
         <figure>
-          <img src="discovery.jpg" alt="Space Shuttle" />
-          <figcaption>NASA - Space Shuttle Discovery</figcaption>
+          <img src="https://sites.psu.edu/siowfa16/files/2016/10/YeDYzSR-10apkm4.png" alt="Space Shuttle" width="100px"/>
+          <figcaption>This the smile caption</figcaption>
+          <img src="kites.jpg" alt="Mmmm, no images.." />
         </figure>
-        <picture>
-          <source media="(min-width: 1024px)" srcset="images/banner-large.png">
-          <source media="(max-width: 768px)" srcset="images/banner-small.png">
-          <img src="images/banner.png" alt="Banner">
-        </picture>
-        <pre>
-        The pre
-            element preserves      spaces,
-                line-breaks, tabs...
-        </pre>
-        <form>
-          <p>Leave your Comment: 
-              <textarea cols="60" rows="5">write here...</textarea>
-          </p>
-          <p>Here is some <u>underlined text</u>
-        </form>
-        <h2>Task Progress</h2>
-        <p>Progress: <progress id="bar" value="0" max="100"><span>0</span>%</progress></p>
-        <script type="text/javascript">
-          var i = 0;
-          var progressBar = document.getElementById("bar");
-          function countNumbers(){
-            if(i < 100){
-              i = i + 1;
-              progressBar.value = i;
-              // For browsers that don't support progress tag
-              progressBar.getElementsByTagName("span")[0].textContent = i;
-            }
-            // Wait for sometime before running this script again
-            setTimeout("countNumbers()", 500);
-          }
-          countNumbers();
-        </script>
+
+        <hr>
+
+        
+
+<p>Svg element</p>
+<svg viewBox="0 0 200 200" width="400"  height="400">
+  <circle cx="100" cy="100" fill="yellow" r="78" stroke="black" stroke-width="3" />
+  <g>
+      <circle cx="65" cy="82" r="12" />
+      <circle cx="130" cy="82" r="12" />
+  </g>
+  <path d="M65 115 a1,0.8 0 0,0 65,0" fill="none" stroke="black" stroke-width="3" />
+</svg>
+
+<hr>
+
+<p>Embed element</p>
+<embed src="blur.swf" width="400px" height="200px" />
+
+<hr>
+
+<p>Canvas element</p>
+<canvas id="myCanvas" width="300" height="200"></canvas>
+<script type="text/javascript">
+  window.onload = function () {
+    var canvas = document.getElementById("myCanvas");
+    var context = canvas.getContext("2d");
+    context.moveTo(50, 150);
+    context.lineTo(250, 50);
+    context.stroke();
+  };
+</script>
+
+<hr>        
+
         <footer>
-          <p>FOOTER</p>
+          <p>Footer element</p>
         </footer>
-        <img src="kites.jpg" alt="Flying Kites" />
-        <ul>
-          <li>Buy some cookies</li>
-          <li><ins>Do some cleaning<mark>some more highlighted</mark></ins></li>
-          <li><del>Relaxation time</del></li>
-          <li><ins>Visit a doctor</ins></li>
-        </ul>
-        <form action="process-key.php" method="post">
-          <label>Username: <input type="text" name="username"></label>
-          <label>Encryption: <keygen name="key"></label>
-          <input type="submit" value="Submit">
-        </form>
+
+        <hr>
+        
+        
+        
       </main>
     </body>
   </head>
