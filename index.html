@@ -25,8 +25,8 @@
       <p class="fab fa-html5"> Main element (wrap all the page)</p>
       <main>
         <header>
-          <p class="fab fa-html5"> Header element</p>
-          <nav>dentro nav usa ul e li
+          <p class="fab fa-html5"> Header element [dentro nav usa ul e li]</p>
+          <nav>
             <p class="fab fa-html5"> Nav element</p>
             <p>
               <a href="#">Home</a> | <a href="#">About</a> |
@@ -35,12 +35,12 @@
           </nav>
         </header>
 
-        <hr>
+        <hr/> CHIUDI CON SLASH!!!!
 
-        <p class="fab fa-html5"> Video element</p>
+        <p class="fab fa-html5"> Video element [guarda i tag video (oltre a controls e src usa poster(preview img)) (parametri come muted, autoplay, loop..)]</p>
         <video controls="controls" src="./video/video.mp4">
           Your browser does not support the HTML5 Video element.
-        </video>guarda i tag video (oltre a controls e src usa poster(preview img)) (parametri come muted, autoplay, loop..)
+        </video>
 
         <h1>Text in 'h1'</h1>
         <h2>Text in 'h2'</h2>
@@ -53,7 +53,7 @@
         <p>Superscript: E=mc<sup>2.</sup></p>
         <p>Subscript: H<sub>2</sub>O.</p>
         <p><address>Address text.</address></p>
-        <p><strong>Strong text!</strong></p>utilizzalo rispetto a b
+        <p><strong>Strong text! [utilizzalo rispetto a b]</strong></p>
         <p><b>Testo bold.</b></p>
         <p><ins>Ins element</ins></p>
         <p><u>Underlined elemet</u></p>
@@ -74,13 +74,13 @@
         <hr>
         
         <article>
-          <p class="fab fa-html5"> Article element with paragraph.</p>
+          <p class="fab fa-html5"> Article element with paragraph.[articolo di blog]</p>
         </article>
         
         <hr>
 
         <aside>
-          <p class="fab fa-html5"> Aside element with paragraph.</p>
+          <p class="fab fa-html5"> Aside element with paragraph.[sidebar laterale..spalla a sx e dx section]</p>
         </aside>
 
         <hr>
@@ -103,12 +103,12 @@
 
         <hr>
 
-        <p class="fab fa-html5"> Meter element: <meter value="0.8">80%</meter></p>
+        <!-- <p class="fab fa-html5"> Meter element: <meter value="0.8">80%</meter></p> -->
 
         <hr>
 
-        <p class="fab fa-html5"> Task progress element <progress id="bar" value="0" max="100"><span>0</span>%</progress></p>
-        <script type="text/javascript">
+        <!-- <p class="fab fa-html5"> Task progress element <progress id="bar" value="0" max="100"><span>0</span>%</progress></p> -->
+        <!-- <script type="text/javascript">
           var i = 0;
           var progressBar = document.getElementById("bar");
           function countNumbers(){
@@ -122,13 +122,13 @@
             setTimeout("countNumbers()", 500);
           }
           countNumbers();
-        </script>
+        </script> -->
 
         <hr>
 
-        <p>
+        <!-- <p>
           Bdo element can reverse my name "Emanuele": <bdo dir="rtl">Emanuele</bdo>
-        </p>
+        </p> -->
 
         <hr>
 
@@ -138,7 +138,7 @@
         
         <hr>
 
-        <pre>
+        <pre>[dentro il tag code]
           The pre
               element preserves      spaces,
                   line-breaks, tabs...
@@ -147,8 +147,14 @@
         <hr>
 
         <form action="process-key.php" method="post" style="border: 3px solid">
-          <p><label>Input text element -><input type="text" name="username"><-</label></p>
-          <p class="fab fa-html5"><label> Keygen element -><keygen name="key"></label><-</p>
+          <p><label>Input text element [anche required senza uguali e prima dello slash finale - chiudi input con slash]-><input type="text" name="username"><-</label></p>
+          <p><label>Input password element [anche required senza uguali e prima dello slash finale - chiudi input con slash]-><input type="password" name="username"/><-</label></p>
+          <p><label>Input email element [anche required senza uguali e prima dello slash finale - chiudi input con slash]-><input type="email" name="username"/><-</label></p>
+          <p><label>Input number element, si può formattare [anche required senza uguali e prima dello slash finale - chiudi input con slash]-><input type="number" name="username"/><-</label></p>
+
+
+          <p class="fab fa-html5"><label> 
+            <!-- Keygen element -><keygen name="key"></label><-</p> -->
           
           <hr>
 
@@ -165,6 +171,8 @@
             <input type="radio" name="RadioSet" value="one" id="male" />
             <label for="male">Radio1</label>
             <input type="radio" name="RadioSet" value="two" id="female" />
+            <label for="female">Radio2</label>
+            <input type="checkbox" name="CheckSet" value="two" id="female" />
             <label for="female">Radio2</label>
           </fieldset>
           
@@ -211,6 +219,8 @@
 
         <hr>
 
+        
+
         <table style="border: 3px solid;">
           <colgroup>
             <col style="background-color: rgb(60, 60, 255)" />
@@ -250,14 +260,14 @@
           </tfoot>
         </table>
 
-        <hr>
+        <!-- <hr>
 
         <p class="fab fa-html5"> Dialog element (display:relative)</p>
         <dialog open style="position: relative;">
           <p>Are you sure you want to remove this item?</p>
           <button type="button">Yes</button>
           <button type="button">No</button>
-        </dialog>
+        </dialog> -->
 
         <hr>
 
@@ -289,7 +299,7 @@
 <hr>
 
 <p class="fab fa-html5"> Canvas element</p>
-<canvas id="myCanvas" width="300" height="200"></canvas>
+<!-- <canvas id="myCanvas" width="300" height="200"></canvas> -->
 <script type="text/javascript">
   window.onload = function () {
     var canvas = document.getElementById("myCanvas");
