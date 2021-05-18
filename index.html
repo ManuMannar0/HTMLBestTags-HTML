@@ -22,12 +22,12 @@
     <!-- css -->
     <!-- <link href="" rel="stylesheet" /> -->
     <body>
-      <p class="fab fa-html5"> Main element (wrap all the page)</p>
+      <p class="fab fa-html5"> Main tag (wrap all the page)</p>
       <main>
         <header>
-          <p class="fab fa-html5"> Header element [dentro nav usa ul e li]</p>
+          <p class="fab fa-html5"> Header tag [dentro nav usa ul e li]</p>
           <nav>
-            <p class="fab fa-html5"> Nav element</p>
+            <p class="fab fa-html5"> Nav tag</p>
             <p>
               <a href="#">Home</a> | <a href="#">About</a> |
               <a href="#">Contact</a>
@@ -35,11 +35,11 @@
           </nav>
         </header>
 
-        <hr/> CHIUDI CON SLASH!!!!
+        <hr /> 
 
-        <p class="fab fa-html5"> Video element [guarda i tag video (oltre a controls e src usa poster(preview img)) (parametri come muted, autoplay, loop..)]</p>
-        <video controls="controls" src="./video/video.mp4">
-          Your browser does not support the HTML5 Video element.
+        <p class="fab fa-html5"></p>
+        <video controls="controls" src="./video/video.mp4" poster="./imgs/io.jpg" muted autoplay loop>
+          Your browser does not support the HTML5 Video tag.
         </video>
 
         <h1>Text in 'h1'</h1>
@@ -53,37 +53,37 @@
         <p>Superscript: E=mc<sup>2.</sup></p>
         <p>Subscript: H<sub>2</sub>O.</p>
         <p><address>Address text.</address></p>
-        <p><strong>Strong text! [utilizzalo rispetto a b]</strong></p>
+        <p><strong>Strong text, better then b tag</strong></p>
         <p><b>Testo bold.</b></p>
-        <p><ins>Ins element</ins></p>
+        <p><ins>Ins tag</ins></p>
         <p><u>Underlined elemet</u></p>
-        <p><mark>Mark element</mark></p>
-        <p><del>Del element</del></p>
-        <hr>
+        <p><mark>Mark tag</mark></p>
+        <p><del>Del tag</del></p>
+        <hr />
 
         <section>
-          <p class="fab fa-html5"> Section element with paragraph.</p>
+          <p class="fab fa-html5"> Section tag with paragraph.</p>
         </section>
 
-        <hr>
+        <hr />
 
         <div>
-          <p>Div element with paragraph.</p>
+          <p>Div tag with paragraph.</p>
         </div>  
 
-        <hr>
+        <hr />
         
         <article>
-          <p class="fab fa-html5"> Article element with paragraph.[articolo di blog]</p>
+          <p class="fab fa-html5"> Article tag with paragraph.[articolo di blog]</p>
         </article>
         
-        <hr>
+        <hr />
 
         <aside>
-          <p class="fab fa-html5"> Aside element with paragraph.[sidebar laterale..spalla a sx e dx section]</p>
+          <p class="fab fa-html5"> Aside tag with paragraph.[sidebar laterale..spalla a sx e dx section]</p>
         </aside>
 
-        <hr>
+        <hr />
 
         <ol>
           <p>Order list</p>
@@ -92,81 +92,56 @@
           <li>Item 3</li>
         </ol>
 
-        <hr>
+        <hr />
 
         <ul>
           <p>Unordered list</p>
-          <li>Li element</li>
-          <li>Li element</li>
-          <li>Li element</li>  
+          <li>Li tag</li>
+          <li>Li tag</li>
+          <li>Li tag</li>  
         </ul>
 
-        <hr>
-
-        <!-- <p class="fab fa-html5"> Meter element: <meter value="0.8">80%</meter></p> -->
-
-        <hr>
-
-        <!-- <p class="fab fa-html5"> Task progress element <progress id="bar" value="0" max="100"><span>0</span>%</progress></p> -->
-        <!-- <script type="text/javascript">
-          var i = 0;
-          var progressBar = document.getElementById("bar");
-          function countNumbers(){
-            if(i < 100){
-              i = i + 1;
-              progressBar.value = i;
-              // For browsers that don't support progress tag
-              progressBar.getElementsByTagName("span")[0].textContent = i;
-            }
-            // Wait for sometime before running this script again
-            setTimeout("countNumbers()", 500);
-          }
-          countNumbers();
-        </script> -->
-
-        <hr>
-
-        <!-- <p>
-          Bdo element can reverse my name "Emanuele": <bdo dir="rtl">Emanuele</bdo>
-        </p> -->
-
-        <hr>
+        <hr />
 
         <blockquote>
-          <p>Blockquote element (long quotation).</p>
+          <p>Blockquote tag (long quotation).</p>
         </blockquote>
         
-        <hr>
+        <hr />
 
-        <pre>[dentro il tag code]
-          The pre
-              element preserves      spaces,
-                  line-breaks, tabs...
-        </pre>
+        <code>
+          Code tag
+          <pre>
+            Pre tag usually used inside
+                        code tag
+            The pre tag
+                tag preserves      spaces,
+                    line-breaks, tabs...
+          </pre>
+        </code>
 
-        <hr>
+        <hr />
 
         <form action="process-key.php" method="post" style="border: 3px solid">
-          <p><label>Input text element [anche required senza uguali e prima dello slash finale - chiudi input con slash]-><input type="text" name="username"><-</label></p>
-          <p><label>Input password element [anche required senza uguali e prima dello slash finale - chiudi input con slash]-><input type="password" name="username"/><-</label></p>
-          <p><label>Input email element [anche required senza uguali e prima dello slash finale - chiudi input con slash]-><input type="email" name="username"/><-</label></p>
-          <p><label>Input number element, si può formattare [anche required senza uguali e prima dello slash finale - chiudi input con slash]-><input type="number" name="username"/><-</label></p>
+          <p class="fab fa-html5"> Form<label> 
+          <p><label>Input text tag <input type="text" name="username" minlength="1" required /></label></p>
+          <p><label>Input password tag <input type="password" name="username" minlength="4" maxlength="16" required /></label></p>
+          <p><label>Input email tag <input type="email" name="username" maxlength="30" required /></label></p>
+          <p><label>Input number tag <input type="number" name="username" required/></label></p>
 
-
-          <p class="fab fa-html5"><label> 
-            <!-- Keygen element -><keygen name="key"></label><-</p> -->
           
-          <hr>
+          
+          <hr />
 
-          <p>Text area element: 
+          <p>Text area tag: 
             <textarea cols="60" rows="5">write here...</textarea>
           </p>
           
-          <hr>
+          <hr />
 
           <p>Fieldset 'Input radio'</p>
           <fieldset>
-            <legend>Legend element</legend>
+            <legend>Legend tag</legend>
             <p>Select radios:</p>
             <input type="radio" name="RadioSet" value="one" id="male" />
             <label for="male">Radio1</label>
@@ -176,12 +151,12 @@
             <label for="female">Radio2</label>
           </fieldset>
           
-          <hr>
+          <hr />
 
           <p>Fieldset 'Optgroup'</p>
           <fieldset>
-            <legend>Legend element</legend>
-            <p>Select element</p>
+            <legend>Legend tag</legend>
+            <p>Select tag</p>
             <select>
               <optgroup label="Optgroup1">
                   <option value="one">Option1-1</option>
@@ -194,17 +169,17 @@
             </select>
           </fieldset>
           
-          <hr>
+          <hr />
 
-          <p class="fab fa-html5"> Details and summary element</p>
+          <p class="fab fa-html5"> Details and summary tag</p>
           <details>
-            <summary>Summary element</summary>
-            <p>A paragraph element</p>
+            <summary>Summary tag</summary>
+            <p>A paragraph tag</p>
           </details>
 
-          <hr>
+          <hr />
 
-          <p class="fab fa-html5"> Datalist element</p>
+          <p class="fab fa-html5"> Datalist tag</p>
           <input type="text" list="option-list" />
           <datalist id="option-list">
             <option value="Option1"></option>
@@ -212,14 +187,12 @@
             <option value="Option3"></option>
           </datalist>
 
-          <hr>
+          <hr />
           
-          <input type="submit" value="Submit">
+          <input type="submit" value="Submit" />
         </form>
 
-        <hr>
-
-        
+        <hr />
 
         <table style="border: 3px solid;">
           <colgroup>
@@ -227,7 +200,7 @@
             <col span="2" style="background-color: rgb(160, 160, 255)" />
           </colgroup>
           <caption>
-            Table, colgroup, caption, thead, tbody, tfoot, tr and th elements
+            Table, colgroup, caption, thead, tbody, tfoot, tr and th tags
           </caption>
           <thead>
             <tr>
@@ -260,65 +233,38 @@
           </tfoot>
         </table>
 
-        <!-- <hr>
+        <hr />
 
-        <p class="fab fa-html5"> Dialog element (display:relative)</p>
-        <dialog open style="position: relative;">
-          <p>Are you sure you want to remove this item?</p>
-          <button type="button">Yes</button>
-          <button type="button">No</button>
-        </dialog> -->
-
-        <hr>
-
-        <p class="fab fa-html5"> Figure, img and Figcaption element</p>
+        <p class="fab fa-html5"> Figure, img and Figcaption tag</p>
         <figure>
           <img src="./imgs/io.jpg" alt="Emanuele Mancari" width="100px"/>
           <figcaption>Figcaption</figcaption>
         </figure>
         
-        <hr>
+        <hr />
 
-        
+        <p class="fab fa-html5"> Svg tag</p>
+        <svg viewBox="0 0 200 200" width="100"  height="100">
+          <circle cx="100" cy="100" fill="blue" r="78" stroke="black" stroke-width="3" />
+          <g>
+              <circle cx="65" cy="82" r="12" />
+              <circle cx="130" cy="82" r="12" />
+          </g>
+          <path d="M65 115 a1,0.8 0 0,0 65,0" fill="none" stroke="black" stroke-width="3" />
+        </svg>
 
-<p class="fab fa-html5"> Svg element</p>
-<svg viewBox="0 0 200 200" width="100"  height="100">
-  <circle cx="100" cy="100" fill="blue" r="78" stroke="black" stroke-width="3" />
-  <g>
-      <circle cx="65" cy="82" r="12" />
-      <circle cx="130" cy="82" r="12" />
-  </g>
-  <path d="M65 115 a1,0.8 0 0,0 65,0" fill="none" stroke="black" stroke-width="3" />
-</svg>
+        <hr />
 
-<hr>
+        <p class="fab fa-html5"> Embed tag</p>
+        <embed src="blur.swf" width="400px" height="200px" />
 
-<p class="fab fa-html5"> Embed element</p>
-<embed src="blur.swf" width="400px" height="200px" />
-
-<hr>
-
-<p class="fab fa-html5"> Canvas element</p>
-<!-- <canvas id="myCanvas" width="300" height="200"></canvas> -->
-<script type="text/javascript">
-  window.onload = function () {
-    var canvas = document.getElementById("myCanvas");
-    var context = canvas.getContext("2d");
-    context.moveTo(50, 150);
-    context.lineTo(250, 50);
-    context.stroke();
-  };
-</script>
-
-<hr>        
+        <hr />        
 
         <footer>
-          <p class="fab fa-html5"> Footer element</p>
+          <p class="fab fa-html5"> Footer tag</p>
         </footer>
 
-        <hr>
-        
-        
+        <hr />
         
       </main>
     </body>
